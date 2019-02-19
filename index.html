@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<title>Vue Image Slider</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div id="app">
+			<p class="header">
+				Get EXCLUSIVE early-bird deal: $99 <span class="price">$140</span> by
+				subscribing to our email list
+			</p>
+			<h3 class="logo">#RENS</h3>
+			<div class="app-title">
+				<h2 class="title">WORLD'S FIRST SNEAKER MADE FROM COFFEE</h2>
+			</div>
+
+			<div class="circle">
+				<ul class="slick-dots">
+					<li
+						v-for="(image, i) in images"
+						:key="image.id"
+						@click="activeImage(i)"
+						:class="[(currentIndex == i) ? 'active' : '']"
+					></li>
+				</ul>
+			</div>
+			<transition-group tag="div" class="img-slider" name="fade">
+				<div v-for="number in [currentIndex]" v-bind:key="number">
+					<img :src="currentImage" />
+				</div>
+			</transition-group>
+		</div>
+		<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>

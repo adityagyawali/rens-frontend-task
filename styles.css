@@ -1,0 +1,161 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.header {
+	background: red;
+	color: white;
+	margin: 0;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 100;
+	padding: 15px;
+}
+
+.price {
+	text-decoration: line-through;
+}
+
+.logo {
+	position: absolute;
+	transform: translateY(5%);
+	left: 3%;
+	font-size: 24px;
+	color: white;
+	z-index: 100;
+}
+
+.app-title {
+	position: absolute;
+
+	top: 40%;
+	left: 32%;
+	color: white;
+	text-align: center;
+	width: 32%;
+	z-index: 100;
+}
+.title {
+	font-size: 40px;
+	margin: auto;
+}
+
+.circle {
+	position: absolute;
+	transform: translateY(-50%) rotate(90deg);
+	right: 0%;
+	top: 40%;
+	z-index: 100;
+}
+
+.circle .slick-dots li {
+	background-color: transparent;
+	border: 2px solid #fff;
+	width: 10px;
+	height: 10px;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.slick-dots li {
+	display: inline-block;
+	text-indent: -99999px;
+	width: 4px;
+	height: 4px;
+	background-color: #ababab;
+	border-radius: 50%;
+	margin-left: 4px;
+	margin-right: 4px;
+	border: none;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.slick-dots li.active {
+	background: #fff;
+}
+
+/* animation */
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: all 0.8s ease;
+
+	opacity: 1;
+}
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
+}
+
+.img-slider {
+	overflow: hidden;
+	position: absolute;
+	height: 80vh;
+	width: 100%;
+}
+
+.img-slider img {
+	position: absolute;
+	height: 80vh;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+@media only screen and (max-device-width: 480px) {
+	/* styles for mobile browsers smaller than 480px; (iPhone) */
+	.app-title {
+		width: 100%;
+		left: 0;
+		z-index: 100;
+	}
+	.title {
+		font-size: 27px;
+		margin: auto;
+	}
+	.circle {
+		display: none;
+	}
+}
+@media only screen and (max-device-width: 340px) {
+	/* styles for mobile browsers smaller than 480px; (iPhone) */
+	.app-title {
+		width: 100%;
+		left: 0;
+		z-index: 100;
+	}
+	.title {
+		font-size: 20px;
+		margin: auto;
+		z-index: 100;
+	}
+	.circle {
+		display: none;
+	}
+}
+@media only screen and (device-width: 768px) {
+	/* default iPad screens */
+	.app-title {
+		width: 60%;
+		left: 20%;
+	}
+	.title {
+		font-size: 30px;
+		margin: auto;
+	}
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+	/* For landscape layouts only */
+	.app-title {
+		width: 60%;
+		left: 20%;
+	}
+	.title {
+		font-size: 30px;
+		margin: auto;
+	}
+}
