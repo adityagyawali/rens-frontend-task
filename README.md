@@ -14,8 +14,7 @@ See provided designs in `design` to visualize the component or go to https://www
 $ git clone https://github.com/adityagyawali/rens-frontend-task.git
 ```
 
-#### Task
+## Some Changes
 
 1. there are 3 dots on the right as there were three images
-2. there are no dots in the mobile potrait version.
-3. used <transition-group> vue component, for fading animation while image sliding.
+2. there are no dots in the mobile potrait version. I checked the example website and it also didn't have for mobile version
