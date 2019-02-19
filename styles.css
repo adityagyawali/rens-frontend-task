@@ -44,7 +44,7 @@ body {
 	position: absolute;
 	transform: translateY(-50%) rotate(90deg);
 	right: 0%;
-	top: 40%;
+	top: 42%;
 	z-index: 100;
 }
 
@@ -105,12 +105,12 @@ body {
 	right: 0;
 }
 
-@media only screen and (max-device-width: 480px) {
-	/* styles for mobile browsers smaller than 480px; (iPhone) */
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 	.app-title {
 		width: 100%;
+		top: 55%;
 		left: 0;
-		z-index: 100;
 	}
 	.title {
 		font-size: 27px;
@@ -120,11 +120,30 @@ body {
 		display: none;
 	}
 }
-@media only screen and (max-device-width: 340px) {
-	/* styles for mobile browsers smaller than 480px; (iPhone) */
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 	.app-title {
 		width: 100%;
 		left: 0;
+	}
+	.title {
+		font-size: 20px;
+		margin: auto;
+	}
+	.circle {
+		display: none;
+	}
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.app-title {
+		width: 60%;
+		left: 20%;
+		top: 50%;
 		z-index: 100;
 	}
 	.title {
@@ -133,29 +152,39 @@ body {
 		z-index: 100;
 	}
 	.circle {
-		display: none;
-	}
-}
-@media only screen and (device-width: 768px) {
-	/* default iPad screens */
-	.app-title {
-		width: 60%;
-		left: 20%;
-	}
-	.title {
-		font-size: 30px;
-		margin: auto;
+		top: 55%;
 	}
 }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
-	/* For landscape layouts only */
+/* ----------- iPhone X ----------- */
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+	.app-title {
+		width: 80%;
+		left: 10%;
+	}
+	.title {
+		font-size: 20px;
+		margin: auto;
+	}
+	.circle {
+		display: none;
+	}
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
 	.app-title {
 		width: 60%;
+		top: 50%;
 		left: 20%;
 	}
 	.title {
 		font-size: 30px;
 		margin: auto;
+	}
+	.circle {
+		top: 55%;
 	}
 }
